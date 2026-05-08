@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <h2>User Panel</h2>
+
+            <ul>
+
+                <li class="nav-item active"
+                    data-section="dashboardSection">
+
+                    Dashboard
+
+                </li>
+
+                <li class="nav-item"
+                    data-section="usersSection">
+
+                    Users
+
+                </li>
+
+                <li class="nav-item"
+                    data-section="settingsSection">
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+            <button class="logout-btn"
+                onclick="logout()">
+
+                Logout
+
+            </button>
+
+        </aside>
+
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+
+            <!-- DASHBOARD SECTION -->
+
+            <div id="dashboardSection"
+                class="section-content">
+
+                <!-- STATS -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <h3>Total Users</h3>
+
+                        <p id="totalUsers">
+                            0
+                        </p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <h3>System Status</h3>
+
+                        <p class="active-status">
+                            Active
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ADD USER -->
+
+                <div class="glass-card">
+
+                    <h2>Add New User</h2>
+
+                    <form id="addUserForm">
+
+                        <input type="text"
+                            id="name"
+                            placeholder="Enter Full Name"
+                            required>
+
+                        <input type="email"
+                            id="email"
+                            placeholder="Enter Email"
+                            required>
+
+                        <input type="password"
+                            id="password"
+                            placeholder="Enter Password"
+                            required>
+
+                        <button type="submit"
+                            class="btn">
+
+                            Add User
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+
+                <!-- SEARCH -->
+
+                <div class="glass-card">
+
+                    <input type="text"
+                        id="searchInput"
+                        placeholder="Search users...">
+
+                </div>
+
+            </div>
+
+
+
+            <!-- USERS SECTION -->
+
+            <div id="usersSection"
+                class="section-content hidden-section">
+
+                <div class="glass-card table-card">
+
+                    <h2>User Records</h2>
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Name</th>
+
+                                <th>Email</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="userTableBody">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SETTINGS SECTION -->
+
+            <div id="settingsSection"
+                class="section-content hidden-section">
+
+                <div class="glass-card">
+
+                    <h2>Settings</h2>
+
+                    <div class="settings-box">
+
+                        <p>
+
+                            Theme:
+                            <span class="active-status">
+                                Dark Mode
+                            </span>
+
+                        </p>
+
+                        <p>
+
+                            Backend:
+                            <span class="active-status">
+                                Connected
+                            </span>
+
+                        </p>
+
+                        <p>
+
+                            MongoDB:
+                            <span class="active-status">
+                                Active
+                            </span>
+
+                        </p>
+
+                        <button class="btn logout-setting-btn"
+                            onclick="logout()">
+
+                            Logout
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
